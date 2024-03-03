@@ -1,0 +1,309 @@
+
+
+:root {
+    --main-white: #f0f0f0;
+    --main-gray: #808080;
+    --main-green: rgb(15, 116, 0);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+  body {
+    margin: 0;
+    font-family: Verdana, Tahoma, sans-serif;
+    overflow: hidden; /* Hide horizontal scrollbar during the transition */
+    overflow-y: auto;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+.loading-icon {
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
+    border-radius: 50%;
+    border-top: 5px solid transparent; /* Creating a gap at the top */
+    animation: spin 1s linear infinite; /* Animation: spinning */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideOff {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-sec {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    display: inline-block; /* Prevents the anchor tags from collapsing */
+    transition: transform 0.3s; /* Smooth transition for scale change */
+  }
+
+  /* Hover effect - increase font size on hover */
+  nav a:hover {
+    transform: scale(1.2); /* Increase the size by 20% */
+  }
+
+.nav-list {
+    display: flex;
+    margin-right: 20px;
+}
+  
+.nav-list a {
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+
+#Info {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+
+
+
+}
+
+#Work {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+}
+
+#Contact {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+}
+
+
+.info-img {
+    
+    background-size: cover;
+    z-index: 100;
+    width: 25%;
+    height: 50vh;
+    padding: 20px;
+    margin: 20px;
+}
+
+#info-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    color: #fff;
+}
+
+.info-words {
+    line-height: 35px;
+    font-size: 25px;
+}
+
+.h1-1 {
+    padding-bottom: 40px;
+}
+
+
+
+.interchangeables:hover {
+    transform: scale(1.2);
+}
+
+
+#contact {
+    padding: 200px;
+    color: #808080;
+}
+
+.contact-writing > h1{
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 75vh;
+    margin-bottom: -300px;
+    padding-top: 500px;
+}
+
+
+.social-media-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25vh;
+    margin: 20px 0;
+    padding-top: 300px;
+  }
+
+  /* Style for social media icons */
+  .social-media-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: rgb(255, 255, 255); /* Adjust icon color as needed */
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+  }
+
+
+.windowz-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents wrapping to the next line */
+    width: 100%; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    height: 100vh;
+    
+    overflow-x: scroll;
+  }
+
+  /* Style for individual windows */
+  .windowz {
+    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
+    height: 50vh;
+    width: 50vw; /* Adjust as needed */
+    margin-right: 50px; /* Adjust spacing between windows */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(0, 136, 30);
+    cursor: pointer;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.45s ease;
+    color: #fff;
+    
+  }
+
+  .windowz:hover {
+    background-color: lightcyan;
+    transform: scale(1.05); /* Increase the size on hover */
+} 
+
+
+.window1 {
+    background-image: url('https://i.guim.co.uk/img/media/6160b12c897a809733884ec2c7deaf7d2ad947f4/1237_885_3857_2314/master/3857.jpg?width=620&quality=85&auto=format&fit=max&s=175144932f23c62dc120f78f89394569');
+    margin-left: 25vw;
+}
+
+.window2 {
+    background-image: url('https://www.apple.com/newsroom/images/product/imac-pro/Apple-Shop-with-a-Specialist-hero_big.jpg.slideshow-large_2x.jpg');
+}
+
+.window3 {
+    background-image: url('https://www.artsyshark.com/wp-content/uploads/2021/03/Artplacer-Kell-exhibition-photo-2-e1615652369975.jpg');
+}
+
+.window4 {
+    background-image: url('https://d7hftxdivxxvm.cloudfront.net/?height=630&quality=80&resize_to=fill&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FXn47UldaORS-NII9OdPNwQ%252Foriginal.jpg&width=1200');
+}
+
+.window5 {
+    background-image: url('https://i.redd.it/anyone-interested-in-making-the-animation-for-the-matrix-v0-4904jjjxjlja1.png?width=4300&format=png&auto=webp&s=c91827571a4af6cd91be8d13b108800209b97e32');
+}
+
+
+
+
+
+#span1 {
+    color: rgb(25, 125, 187);
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+#textElement {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #changeButton {
+    padding: 20px 20px;
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 30px;
+    transition: transform 0.5s;
+  }
+
+  #changeButton:hover {
+    transform: scale(1.5);
+    
+  }
+
+
